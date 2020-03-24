@@ -124,18 +124,13 @@ void adjMatrix(Matrix M, Matrix &R) {
   Matrix cofM;
   cofactors(M,cofM);
   transpose(cofM,R);
-
 }
 void invMatrix(Matrix M, Matrix &R){
 
   adjMatrix(M,R);
-  Matrix aux;
-  zeroes(aux,M.size());
-  copyMatrix(M,aux);
   float det = determinante(M);
   for (int i = 0; i < M.size(); i++) {
     for (int j = 0; j < M.at(0).size(); j++) {
-
       R.at(j).at(i) *= (1/det);
     }
   }
