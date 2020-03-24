@@ -129,12 +129,14 @@ void adjMatrix(Matrix M, Matrix &R) {
 void invMatrix(Matrix M, Matrix &R){
 
   adjMatrix(M,R);
-
+  Matrix aux;
+  zeroes(aux,M.size());
+  copyMatrix(M,aux);
   float det = determinante(M);
   for (int i = 0; i < M.size(); i++) {
     for (int j = 0; j < M.at(0).size(); j++) {
-      cout<<R.at(i).at(j)<<endl;
-      R.at(j).at(i) = R.at(i).at(j)*(1/det);
+
+      R.at(j).at(i) *= (1/det);
     }
   }
 

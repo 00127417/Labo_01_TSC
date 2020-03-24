@@ -16,16 +16,17 @@ int main(void ) {
 
   Matrix M, inv;
   zeroes(M,3);
-  M.at(0).at(0) = 1;M.at(0).at(1) = 2;M.at(0).at(2) = 3;
+  M.at(0).at(0) = 2;M.at(0).at(1) = 2;M.at(0).at(2) = 3;
   M.at(1).at(0) = 4;M.at(1).at(1) = 5;M.at(1).at(2) = 6;
   M.at(2).at(0) = 7;M.at(2).at(1) = 8;M.at(2).at(2) = 9;
-
+  cout<<"MATRIZ:"<<endl;
   showMatrix(M);
   float det = determinante(M);
   if(det == 0) return EXIT_FAILURE;
   invMatrix(M,inv);
 
-  cout<<endl<<det<<endl;
+  cout<<endl<<"determinante: "<<det<<endl;
+  cout<<endl<<"MATRIZ INVERSA:"<<endl;
   showMatrix(inv);
   return 0;
 }
