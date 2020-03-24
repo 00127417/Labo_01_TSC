@@ -1,3 +1,4 @@
+/*Autor de este codigo ERNESTO ALONSO HERNANDEZ GUILLEN*/ 
 void showVector(Vector b){
   cout<<"[\t";
   for(int i=0; i<b.size();i++){

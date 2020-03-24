@@ -2,7 +2,7 @@
 #include <vector>
 #include "math.h"
 using namespace std;
-
+/*Autor de este codigo ERNESTO ALONSO HERNANDEZ GUILLEN*/
 typedef vector<float> Vector;
 typedef vector<Vector> Matrix;
 
@@ -119,6 +119,8 @@ void cofactors(Matrix M, Matrix &Cof){
         }
     }
 }
+
+/*Autor de este codigo OSCAR EDENILSON LOVATO QUINTANILLA*/ 
 
 void adjMatrix(Matrix M, Matrix &R) {
   Matrix cofM;
